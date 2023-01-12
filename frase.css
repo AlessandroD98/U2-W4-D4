@@ -20,6 +20,9 @@ main {
     padding: 20px;
     font-family: 'Roboto', sans-serif;
 }
+span i {
+opacity: 0;
+}
 span i:first-of-type {
     color: cadetblue;
     animation: fade 6s infinite;
