@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+html, body {
+    height: 100%;
+    background-color: #676767;
+    font-family: 'Indie Flower', cursive;
+}
+main {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+main div {
+    height: 300px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(0 0 0 / 35%) 7.95px 7.95px 5.6px;
+}
+main div h3 {
+    font-size: 2.8em;
+    font-weight: bold;
+}
+main div p {
+    font-size: 1.7em;
+    margin-top: 15px;
+}
+.PostVerde{
+background-color: #c6f5c9;
+transform: rotate(4deg);
+background: linear-gradient(0deg, rgba(139,139,139,0.9374124649859944) 0%, rgba(198,245,201,1) 28%, rgba(198,245,201,1) 100%);
+transition: transform 1s;
+animation: arrive2 4s;
+}
+.PostViola{
+    background-color: #c8c6f5;
+    transform: rotate(-7deg);
+    background: linear-gradient(0deg, rgba(139,139,139,0.9626225490196079) 0%, rgba(200,198,245,0.9654236694677871) 25%, rgba(200,198,245,1) 100%);
+    transition: transform 1s;
+    animation: arrive3 4s;
+}
+
+.PostGiallo{
+    background-color: #f7f7c5;
+transform: rotate(-4deg);
+background: linear-gradient(0deg, rgba(139,139,139,0.9374124649859944) 0%, rgba(240,240,188,1) 28%, rgba(253,253,203,1) 100%);
+transition: transform 1s;
+animation: arrive 4s;
+}
+.PostGiallo:hover{
+    transform: scale(1.2);
+    box-shadow: rgb(0 0 0 / 64%) 9.95px 7.95px 5.6px;
+    z-index: 2;
+   
+}
+.PostVerde:hover{
+    transform: scale(1.2);
+    z-index: 3;
+    box-shadow: rgb(0 0 0 / 64%) 9.95px 7.95px 5.6px;
+}
+.PostViola:hover{
+    transform: scale(1.2);
+    z-index: 4;
+    box-shadow: rgb(0 0 0 / 64%) 9.95px 7.95px 5.6px;
+}
+@keyframes arrive {
+    0%{translate: -800px;}
+    100%{translate: 0px;}
+}
+@keyframes arrive2 {
+    0%{translate: 800px;}
+    100%{translate: 0px;}
+}
+@keyframes arrive3 {
+    0%{translate: 0px 800px;}
+    100%{translate: 0px;}
+}

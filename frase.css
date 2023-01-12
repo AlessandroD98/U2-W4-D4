@@ -1,0 +1,55 @@
+/*
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+html, body {
+    height: 100%;
+}
+main {
+    width: 25%;
+    position: relative;
+    top: 40px;
+    left: 40px;
+    border: 2px solid black;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+span i:first-of-type {
+    color: cadetblue;
+    animation: fade 6s infinite;
+    position: absolute;
+left: 209px;
+}
+@keyframes fade {
+    0% {translate: 0px -80px; opacity: 0;}
+    50%,60% {translate: 0px;opacity: 1;}
+    100%{translate: 0px 200px; opacity: 0;}
+}
+span i:last-of-type{
+    color: cadetblue;
+    animation: fade2 6s infinite 4s;
+    position: absolute;
+    left: 209px;
+}
+@keyframes fade2 {
+    0% {translate: 0px -80px; opacity: 0;}
+    50%,60% {translate: 0px;opacity: 1;}
+    100%{translate: 0px 200px; opacity: 0;}
+}
+span i:nth-child(2){
+    color: cadetblue;
+    animation: fade3 6s infinite 2s;
+    position: absolute;
+    left: 209px;
+}
+@keyframes fade3 {
+    0% {translate: 0px -80px; opacity: 0;}
+    50%,60% {translate: 0px;opacity: 1;}
+    100%{translate: 0px 200px; opacity: 0;}
+}
